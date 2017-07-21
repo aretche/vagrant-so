@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Seteamos el modo no interactivo de apt-get
+export DEBIAN_FRONTEND=noninteractive
+
 echo "Provisionando la máquina virtual..."
+
 #Cambiando el hostname a la VM...
 hostnamectl set-hostname so-2017
 sed -i 's/localhost/localhost so-2017/g' /etc/hosts
@@ -30,7 +34,8 @@ echo "Descargando FreePascal 2.4.0..."
 mkdir /tmp/fpc
 cd /tmp/fpc
 # Descargamos y descomprimimos FreePascal 2.4.0 64 bits
-wget -nv https://sourceforge.net/projects/freepascal/files/Linux/2.4.0/fpc-2.4.0.x86_64-linux.tar
+wget -q https://sourceforge.net/projects/freepascal/files/Linux/2.4.0/fpc-2.4.0.x86_64-linux.tar
+
 echo "Instalando FreePascal 2.4.0..."
 # Desempaquetamos FreePascal
 tar xvf fpc-2.4.0.x86_64-linux.tar > /dev/null
@@ -42,3 +47,8 @@ rm -rf /tmp/fpc
 # Copiamos archivos de configuración de FreePascal IDE
 cp /vagrant/provision/fpc/fp.* /home/vagrant/
 chown vagrant.vagrant /home/vagrant/fp.*
+
+# Forzamos el color en el prompt de la máquina virtual
+sed -i 's/#force_color_prompt/force_color_prompt/g' /home/vagrant/.bashrc
+
+echo "Finalizadas las actividades de instalación y configuración!"
