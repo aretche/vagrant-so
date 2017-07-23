@@ -3,6 +3,8 @@
 Máquina virtual Vagrant de la cátedra Sistemas Operativos.
 La misma consta de un Ubuntu 14.04 (Trusty Thar) con las herramientas necesarias para llevar a cabo las actividades prácticas de la cátedra.
 
+> Si usted utiliza un sistema operativo de 32 bits por favor utilice la versión de 32 bits de la máquina virtual que está disponible [aquí](https://github.com/aretche/vagrant-so-i686).
+
 ## Requisitos previos
 
 Tener instalado:
@@ -61,6 +63,6 @@ Para eliminar la máquina virtual (se conservan los archivos de la carpeta `prac
 ## En Windows
 
 En el caso de Windows, Git for Windows incluye un cliente SSH (asegúrese que el archivo ssh.exe esté incluido en la variable de entorno PATH).
-Para que el comando SSH quede en el PATH, durante la instalación de Git en la pantalla que dice "Adjusting your PATH environment" seleccione la tercera opción "Use Git and optional Unix tools from the Windows Command Prompt".
+Para que el comando SSH quede en el PATH, durante la instalación de Git en la pantalla que dice *"Adjusting your PATH environment"* seleccione la tercera opción *"Use Git and optional Unix tools from the Windows Command Prompt"*.
 
 Si no está conforme con ese cliente, puede instalar [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
