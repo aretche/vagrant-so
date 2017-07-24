@@ -46,7 +46,7 @@ apt-get install manpages-posix manpages-posix-dev manpages-dev > /dev/null
 echo "Instalando Herramientas Básicas..."
 # gpm para dar soporte al mouse en línea de comandos
 # htop: un comando top mejorado
-apt-get install gpm mc htop -y > /dev/null
+apt-get install gpm mc htop -y &> /dev/null
 
 echo "Eliminando paquetes innecesarios..."
 apt-get purge chef puppet -y > /dev/null
