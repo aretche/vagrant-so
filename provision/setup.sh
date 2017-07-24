@@ -9,6 +9,22 @@ echo "Provisionando la máquina virtual..."
 hostnamectl set-hostname so-2017
 sed -i 's/localhost/localhost so-2017/g' /etc/hosts
 
+# Veo si ya existe un archivo de swap
+grep -q "swapfile" /etc/fstab
+# si no existe lo creo...
+if [ $? -ne 0 ]; then
+  echo 'No se encontró archivo de swap. Creándolo...'
+  # Tamaño del archivo de swap en megabytes
+  swapsize=256
+  fallocate -l ${swapsize}M /swapfile
+  chmod 600 /swapfile
+  mkswap /swapfile > /dev/null
+  swapon /swapfile > /dev/null
+  echo '/swapfile none swap defaults 0 0' >> /etc/fstab
+else
+  echo 'Archivo de swap encontrado. Omitiendo creación...'
+fi
+
 echo "Actualizando lista de paquetes..."
 # Actualizo la lista de paquetes
 apt-get update > /dev/null
