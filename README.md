@@ -12,6 +12,7 @@ Tener instalado:
 2. [Git](https://git-scm.com/downloads)
 3. [Vagrant](https://www.vagrantup.com/downloads.html)
 
+En el caso de Windows, se requiere como mínimo Windows Vista.
 
 ## Instalación
 
