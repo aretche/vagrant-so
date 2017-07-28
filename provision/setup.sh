@@ -62,8 +62,17 @@ wget -q https://sourceforge.net/projects/freepascal/files/Linux/2.4.0/fpc-2.4.0.
 echo "Instalando FreePascal 2.4.0..."
 # Desempaquetamos FreePascal
 tar xvf fpc-2.4.0.x86_64-linux.tar > /dev/null
-# Instalamos...
-./install.sh < /vagrant/provision/fpc/install_opts > /dev/null
+# Instalamos... (le pasamos via redirección de entrada las opciones al instalador)
+./install.sh > /dev/null <<STDIN -o other --options
+/usr
+Y
+Y
+Y
+
+
+
+
+STDIN
 cd
 # Eliminamos archivos temporales
 rm -rf /tmp/fpc
