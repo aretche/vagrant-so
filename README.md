@@ -20,7 +20,7 @@ Clonar el repositorio usando Git mediante el comando:
 
 `git clone https://github.com/aretche/vagrant-so.git`
 
-Alternativamente puede descargar el repositorio como un archivo .zip desde [aquí](https://github.com/aretche/vagrant-so/archive/2017.07.zip) y descomprimirlo en su computadora.
+Alternativamente puede descargar el repositorio como un archivo .zip desde [aquí](https://github.com/aretche/vagrant-so/archive/2017.08.zip) y descomprimirlo en su computadora.
 
 Dentro del directorio donde clonó el repositorio (o descomprimió el archivo descargado) ejecutar el comando:
 
