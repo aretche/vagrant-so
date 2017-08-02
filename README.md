@@ -17,22 +17,25 @@ En el caso de Windows, se requiere como mínimo Windows Vista.
 ## Instalación
 
 Clonar el repositorio usando Git mediante el comando:
-
-`git clone https://github.com/aretche/vagrant-so.git`
+```Shell
+git clone https://github.com/aretche/vagrant-so.git
+```
 
 Alternativamente puede descargar el repositorio como un archivo .zip desde [aquí](https://github.com/aretche/vagrant-so/archive/2017.07.zip) y descomprimirlo en su computadora.
 
 Dentro del directorio donde clonó el repositorio (o descomprimió el archivo descargado) ejecutar el comando:
-
-`vagrant up --provider=virtualbox`
+```Shell
+vagrant up --provider=virtualbox
+```
 
 Tenga paciencia, ya que este comando descargará e instalará todas las herramientas (la primera ejecución serán unos 600 MB).
 
 ## Uso
 
 Ingresar a la máquina virtual usando:
-
-`vagrant ssh`
+```Shell
+vagrant ssh
+```
 
 
 ### Archivos compartidos
@@ -42,24 +45,28 @@ Dentro de su directorio home se encuentra la carpeta `practicas` que está mapea
 ### Otros comandos de utilidad
 
 Para ver el estado de la máquina virtual:
-
-`vagrant status`
+```Shell
+vagrant status
+```
 
 Para pausar/reactivar la máquina virtual utilizar:
-
-`vagrant suspend`
-
-`vagrant resume`
-
+```Shell
+vagrant suspend
+```
+```Shell
+vagrant resume
+```
 Para apagar/encender la máquina virtual:
-
-`vagrant halt`
-
-`vagrant up`
-
+```Shell
+vagrant halt
+```
+```Shell
+vagrant up
+```
 Para eliminar la máquina virtual (se conservan los archivos de la carpeta `practicas`):
-
-`vagrant destroy`
+```Shell
+vagrant destroy
+```
 
 ## En Windows
 
